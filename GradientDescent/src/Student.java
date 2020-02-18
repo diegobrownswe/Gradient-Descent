@@ -1,24 +1,30 @@
+import java.util.ArrayList;
+
 public class Student {
 	
 	private Integer id;
-	private String rankings;
-	private byte utility = 0;
+	private ArrayList<String> rankings;
+	public short utility = 0;
 	public Integer getId() {
 		return id;
 	}
 	public void setId(Integer id) {
 		this.id = id;
 	}
-	public String getRankings() {
+	public ArrayList<String> getRankings() {
 		return rankings;
 	}
-	public void setRankings(String rankings) {
+	public void setRankings(ArrayList<String> rankings) {
 		this.rankings = rankings;
 	}
-	public byte getUtility() {
+	public short getUtility() {
+		
 		return utility;
 	}
-	public void setUtility(byte utility) {
+	public void setUtility(int indexInShuffledArray) {
+		
+		
+		
 		this.utility = utility;
 	}
 	
