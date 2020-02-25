@@ -21,34 +21,13 @@ public class StudentPreprocessor {
 			Student s = new Student();
 			s.setId(i);
 			s.setRankings(StudentPreprocessor.generateRandomStudentPreferences(Constants.getNLabs()));
-			StudentPreprocessor.setStudentUtility(s, s.getId(), Constants.getNStudents(), Constants.getNLabs());
+//			StudentPreprocessor.setStudentUtility(s, s.getId(), Constants.getNStudents(), Constants.getNLabs());
 			initList.add(s);
 		}
 		
 		return initList;
 	}
-	
-	public static Student setStudentUtility(Student s, int placement, int listLength, int numDivisions) {
-		int region = listLength / numDivisions;
-		if(placement < region) {
-			s.utility = 25;
-		}
-		else if(placement < region * 2) {
-			s.utility = 16;
-		}
-		else if(placement < region * 3) {
-			s.utility = 9;
-		}
-		else if(placement < region * 4) {
-			s.utility = 3;
-		}
-		else if(placement < region * 5) {
-			s.utility = 0;
-		}
-		return s;
-		
-	}
-	
+//	setUtility() will be done in simulator.java
 	public static ArrayList<String> generateRandomStudentPreferences(int stringLength){
 		
 		ArrayList<String> preferenceList = new ArrayList<String>();
